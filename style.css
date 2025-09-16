@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* ///////// RESET ////////// */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--grey-200);
+}
+
+/* ///////// RESET ////////// */
+
+/* ///////// Colors ////////// */
+
+:root {
+  --grey-900: hsl(217, 19%, 35%);
+  --grey-500: hsl(214, 17%, 51%);
+  --grey-400: hsl(212, 23%, 69%);
+  --grey-200: hsl(210, 46%, 95%);
+}
+
+/* ///////// Colors ////////// */
+
+/* ///////// TYPOGRAPHY ////////// */
+
+.text-1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.25px;
+  color: var(--grey-900);
+}
+.text-2-bold {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  color: var(--grey-900);
+}
+.text-2-medium {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  color: var(--grey-500);
+}
+.text-3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 25%;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+
+/* ///////// TYPOGRAPHY ////////// */
+/* ///////// BUTTON ////////// */
+
+/* ///////// BUTTON ////////// */
+
+main {
+  max-width: 730px;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 40px 40px -10px rgba(201, 213, 225, 0.5);
+}
+
+.hero-image {
+  width: 285px;
+  height: 280px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  object-fit: cover;
+}
+
+.text-content {
+  max-width: 365px;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.profile-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  max-width: 170px;
+  min-height: 40px;
+}
+
+.profile-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.share-button {
+  height: 32px;
+  width: 32px;
+  background-color: var(--grey-200);
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.share-button:hover,
+.share-button:active {
+  background-color: var(--grey-400);
+}
+
+.share-container {
+  position: absolute;
+  background-color: var(--grey-900);
+  padding: 18px 38px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  right: 20px;
+  top: 120px;
+}
+.share-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.share-button-mobile {
+  display: none;
+}
+
+.share-icon {
+  height: 20px;
+  width: 20px;
+}
+
+@media (max-width: 770px) {
+  main {
+    max-width: 608px;
+    min-height: 346px;
+    gap: 32px;
+  }
+  .hero-image {
+    width: 229px;
+    height: 346px;
+  }
+
+  .text-content {
+    max-width: 311px;
+    min-height: 264px;
+  }
+
+  .profile-share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .share-container {
+    right: 0px;
+    top: 160px;
+  }
+}
+@media (max-width: 550px) {
+  main {
+    max-width: 327px;
+    min-height: 538px;
+    flex-direction: column;
+  }
+  .hero-image {
+    width: 327px;
+    height: 200px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+  }
+
+  .text-content {
+    align-items: center;
+    max-width: 327px;
+  }
+
+  .text-content h1,
+  .text-content p {
+    max-width: 267px;
+    gap: 0px;
+  }
+
+  .profile-share {
+    margin-top: 24px;
+    max-width: 267px;
+    width: 100%;
+  }
+  .share-container {
+    right: 0px;
+    top: 55px;
+  }
+  .share-container {
+    position: static;
+    border-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    right: 0px;
+    top: 0px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: -75px;
+    z-index: 10;
+  }
+  .share-button-mobile {
+    display: block;
+  }
+}
+
+.hidden {
+  display: none;
+}
